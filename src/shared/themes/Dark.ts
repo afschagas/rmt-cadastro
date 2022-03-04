@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { createTheme } from "@mui/material";
 import { cyan, yellow } from "@mui/material/colors";
 

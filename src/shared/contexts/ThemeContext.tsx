@@ -1,7 +1,7 @@
 // Pegando um contexto
 
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
-import { ThemeProvider } from '@mui/material'
+import { ThemeProvider } from '@mui/material';
 import { DarkTheme, LightTheme } from './../themes';
 import { Box } from '@mui/system';
 
@@ -14,14 +14,14 @@ const ThemeContext = createContext({} as IThemeContextData);
 
 export const useAppThemeContext = () => {
   return useContext(ThemeContext);
-}
+};
 
 export const AppThemeProvider: React.FC = ({ children }) => {
   const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = useCallback(() => {
     setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');
-  }, [])
+  }, []);
 
   const theme = useMemo(() => {
     if (themeName === 'light') return LightTheme;
@@ -40,6 +40,5 @@ export const AppThemeProvider: React.FC = ({ children }) => {
     </ThemeContext.Provider>
   );
 
-}
-
+};
 

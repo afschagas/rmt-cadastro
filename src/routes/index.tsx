@@ -14,6 +14,6 @@ export const AppRoutes = () => {
     </Routes>
   );
 
-}
+};
 
 // Route path='*' - Faz um redirect da pagina
