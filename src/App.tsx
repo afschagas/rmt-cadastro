@@ -1,20 +1,25 @@
-import { ThemeProvider } from '@emotion/react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { AppThemeProvider, DrawerProvider } from './shared/contexts';
 import { AppRoutes } from './routes';
-import { LightTheme } from './shared/themes';
+import { MenuLateral } from './shared/components';
+
 
 export const App = () => {
   return (
-    <ThemeProvider theme={LightTheme}>
-      <BrowserRouter >
-        <AppRoutes />
-      </BrowserRouter>
+    <AppThemeProvider>
+      <DrawerProvider>
 
-    </ThemeProvider>
+        <BrowserRouter >
 
+          <MenuLateral>
+            <AppRoutes />
+          </MenuLateral>
 
+        </BrowserRouter>
+      </DrawerProvider>
+    </AppThemeProvider>
   );
-}
+};
 
 
