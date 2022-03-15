@@ -1,6 +1,9 @@
 import { FerramentasDeDetalhes } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 
+import { ResultsTable } from '../../shared/components';
+
+
 
 export const Dashboard = () => {
 
@@ -12,7 +15,10 @@ export const Dashboard = () => {
       )}>
 
       Testando
+      <ResultsTable />
 
     </LayoutBaseDePagina>
+
+
   );
 };

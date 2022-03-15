@@ -14,6 +14,7 @@ export const App = () => {
 
           <MenuLateral>
             <AppRoutes />
+
           </MenuLateral>
 
         </BrowserRouter>
