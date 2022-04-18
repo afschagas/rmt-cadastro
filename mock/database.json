@@ -1,12 +1,6 @@
 {
   "pessoas": [
     {
-      "id": 1,
-      "email": "afschagas@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Alexandre Chagas"
-    },
-    {
       "id": 2,
       "email": "afschagas@gmail.com",
       "cidadeId": 1,
@@ -50,12 +44,6 @@
     },
     {
       "id": 9,
-      "email": "afschagas@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Alexandre Chagas"
-    },
-    {
-      "id": 10,
       "email": "afschagas@gmail.com",
       "cidadeId": 1,
       "nomeCompleto": "Alexandre Chagas"
