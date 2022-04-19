@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Icon, IconButton, LinearProgress, Pagination, Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from '@mui/material';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 // Components
 import { IListagemPessoa, PessoasService, } from '../../../shared/services/api/pessoas/PessoasService';
@@ -16,6 +16,7 @@ import { Environment } from '../../../shared/environment';
 export const ListagemDePessoas: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { debounce } = useDebounce();
+  const navigate = useNavigate();
 
   const [rows, setRows] = useState<IListagemPessoa[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -99,7 +100,7 @@ export const ListagemDePessoas: React.FC = () => {
                   <IconButton size='small' onClick={() => handleDelete(row.id)} >
                     <Icon>delete</Icon>
                   </IconButton>
-                  <IconButton size='small'>
+                  <IconButton size='small' onClick={() => navigate(`/pessoas/detalhe/${row.id}`)}>
                     <Icon>edit</Icon>
                   </IconButton>
                 </TableCell>
